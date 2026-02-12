@@ -34,6 +34,9 @@
     height: auto;
     border-radius: 6px;
     border: 1px solid var(--border-color);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 20px; /* Espacio debajo del banner */
   }
 
@@ -90,10 +93,14 @@
 <body>
 
 <div class="container">
-  <img src="DNA-banner.jpg" alt="Genómica Ecológica y Evolutiva" class="img-responsive">
-
   <h1>Genómica Ecológica y Evolutiva</h1>
-  <p style="color: var(--text-muted);">Curso de posgrado e investigación.</p>
+  h1 { 
+  text-align: center; 
+  border-bottom: none; /* Quitamos la línea de abajo para que no choque con la imagen */
+}
+  
+  <img src="DNA-banner.jpg" alt="Genómica Ecológica y Evolutiva" class="img-responsive">
+  <p style="color: var(--text-muted);">Curso del Posgrado en Ciencias Biológicas UNAM</p>
 
   <div class="tabs">
     <input type="radio" name="github-tabs" id="tab-1" checked>
@@ -122,8 +129,12 @@
     <input type="radio" name="github-tabs" id="tab-3">
     <label for="tab-3">PROFESORES</label>
     <div class="content">
-      <h2>Cuerpo Académico</h2>
-      <p>Aquí puedes incluir fotos de los profesores usando la misma etiqueta de imagen si lo deseas.</p>
+      <h2>P1</h2>
+      <p>Info</p>
+      <h2>P2</h2>
+      <p>Info</p>
+      <h2>P3</h2>
+      <p>Info</p>
     </div>
   </div>
 </div>
