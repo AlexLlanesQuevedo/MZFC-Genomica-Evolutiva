@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+  
+  /* Estructura de las pestañas */
+  .tabs { display: flex; flex-wrap: wrap; max-width: 600px; }
+  .tabs label { 
+    padding: 10px 20px; 
+    background: #e0e0e0; 
+    cursor: pointer; 
+    font-weight: bold; 
+    margin-right: 5px;
+    border-radius: 5px 5px 0 0;
+  }
+  .tabs .content { 
+    order: 1; width: 100%; border-top: 3px solid #2ea44f; 
+    display: none; padding: 20px; background: #f9f9f9;
+  }
+  
+  /* Lógica para mostrar contenido */
+  .tabs input[type="radio"] { display: none; }
+  .tabs input[type="radio"]:checked + label { background: #2ea44f; color: white; }
+  .tabs input[type="radio"]:checked + label + .content { display: block; }
+</style>
+</head>
+<body>
+
+  <h2>Mi Proyecto en GitHub</h2>
+
+  <div class="tabs">
+    <input type="radio" name="tabs" id="tab1" checked>
+    <label for="tab1">Inicio</label>
+    <div class="content">
+      <h3>Bienvenido</h3>
+      <p>Este es el contenido principal que tenías en tu README.</p>
+    </div>
+
+    <input type="radio" name="tabs" id="tab2">
+    <label for="tab2">Documentación</label>
+    <div class="content">
+      <h3>Guía de uso</h3>
+      <p>Aquí puedes poner los pasos para instalar tu proyecto.</p>
+    </div>
+
+    <input type="radio" name="tabs" id="tab3">
+    <label for="tab3">Contacto</label>
+    <div class="content">
+      <h3>Contacto</h3>
+      <p>Encuéntrame en GitHub o enviando un correo.</p>
+    </div>
+  </div>
+
+</body>
+</html>
