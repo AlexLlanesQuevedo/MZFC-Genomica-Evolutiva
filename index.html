@@ -28,6 +28,14 @@
 
   .container { max-width: 800px; width: 100%; }
 
+  /* Centramos el título y quitamos su borde inferior */
+  h1 { 
+    text-align: center; 
+    color: var(--text-main); 
+    border-bottom: none; 
+    margin-bottom: 10px;
+  }
+
   /* Estilo para imágenes */
   .img-responsive {
     max-width: 100%;
@@ -35,19 +43,16 @@
     border-radius: 6px;
     border: 1px solid var(--border-color);
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px; /* Espacio debajo del banner */
+    margin: 0 auto 20px auto; /* Centrada con margen abajo */
   }
 
-  .content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    border: 1px solid var(--border-color);
-    margin-top: 10px;
+  /* Texto debajo de la imagen */
+  .subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 30px;
   }
-  
+
   /* Estructura de Pestañas */
   .tabs { display: flex; flex-wrap: wrap; }
   .tabs input[type="radio"] { display: none; }
@@ -85,7 +90,7 @@
 
   .tabs input[type="radio"]:checked + label + .content { display: block; }
 
-  h1, h2, h3 { color: var(--text-main); border-bottom: 1px solid var(--border-color); padding-bottom: 8px; }
+  h2, h3 { color: var(--text-main); border-bottom: 1px solid var(--border-color); padding-bottom: 8px; }
   ul { padding-left: 20px; }
   li { margin-bottom: 8px; }
 </style>
@@ -94,13 +99,10 @@
 
 <div class="container">
   <h1>Genómica Ecológica y Evolutiva</h1>
-  h1 { 
-  text-align: center; 
-  border-bottom: none; /* Quitamos la línea de abajo para que no choque con la imagen */
-}
   
   <img src="DNA-banner.jpg" alt="Genómica Ecológica y Evolutiva" class="img-responsive">
-  <p style="color: var(--text-muted);">Curso del Posgrado en Ciencias Biológicas UNAM</p>
+  
+  <p class="subtitle">Curso del Posgrado en Ciencias Biológicas UNAM</p>
 
   <div class="tabs">
     <input type="radio" name="github-tabs" id="tab-1" checked>
