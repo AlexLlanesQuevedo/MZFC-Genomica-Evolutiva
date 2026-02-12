@@ -28,6 +28,17 @@
 
   .container { max-width: 800px; width: 100%; }
 
+<img src="DNA-banner.jpg" alt="Logo del proyecto" class="img-responsive">
+
+  /* Estilo para que las imágenes se adapten al ancho de la pestaña */
+.content img {
+  max-width: 100%;    /* No permite que la imagen sea más ancha que la pestaña */
+  height: auto;       /* Mantiene la proporción */
+  border-radius: 6px; /* Bordes redondeados estilo GitHub */
+  border: 1px solid var(--border-color); /* Borde sutil */
+  margin-top: 10px;
+}
+  
   /* Contenedor de Pestañas */
   .tabs { display: flex; flex-wrap: wrap; }
 
