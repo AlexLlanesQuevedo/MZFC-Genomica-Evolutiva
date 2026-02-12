@@ -28,24 +28,26 @@
 
   .container { max-width: 800px; width: 100%; }
 
-<img src="DNA-banner.jpg" alt="Logo del proyecto" class="img-responsive">
+  /* Estilo para imágenes */
+  .img-responsive {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px; /* Espacio debajo del banner */
+  }
 
-  /* Estilo para que las imágenes se adapten al ancho de la pestaña */
-.content img {
-  max-width: 100%;    /* No permite que la imagen sea más ancha que la pestaña */
-  height: auto;       /* Mantiene la proporción */
-  border-radius: 6px; /* Bordes redondeados estilo GitHub */
-  border: 1px solid var(--border-color); /* Borde sutil */
-  margin-top: 10px;
-}
+  .content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    margin-top: 10px;
+  }
   
-  /* Contenedor de Pestañas */
+  /* Estructura de Pestañas */
   .tabs { display: flex; flex-wrap: wrap; }
-
-  /* Esconder los Radio Buttons */
   .tabs input[type="radio"] { display: none; }
-
-  /* Etiquetas (Los botones de las pestañas) */
   .tabs label { 
     padding: 8px 16px; 
     cursor: pointer; 
@@ -54,22 +56,20 @@
     border-bottom: 2px solid transparent;
     transition: 0.2s;
     color: var(--text-main);
-    margin-bottom: -2px; /* Alineación con el borde del contenido */
+    margin-bottom: -2px;
     z-index: 2;
   }
 
   .tabs label:hover { color: var(--accent); }
 
-  /* Estilo de la pestaña seleccionada */
   .tabs input[type="radio"]:checked + label { 
     border: 1px solid var(--border-color);
-    border-bottom: 2px solid #f78166; /* Naranja estilo GitHub para resaltar */
+    border-bottom: 2px solid #f78166; 
     background-color: var(--bg-main);
     border-radius: 6px 6px 0 0;
     font-weight: 600;
   }
 
-  /* Contenido de las pestañas */
   .tabs .content { 
     order: 1; 
     width: 100%; 
@@ -80,35 +80,35 @@
     border-radius: 6px;
   }
 
-  /* Mostrar contenido al seleccionar */
   .tabs input[type="radio"]:checked + label + .content { display: block; }
 
-  /* Títulos y texto dentro del contenido */
   h1, h2, h3 { color: var(--text-main); border-bottom: 1px solid var(--border-color); padding-bottom: 8px; }
-  code { background: var(--bg-canvas); padding: 2px 5px; border-radius: 4px; font-family: monospace; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 8px; }
 </style>
 </head>
 <body>
 
 <div class="container">
+  <img src="DNA-banner.jpg" alt="Genómica Ecológica y Evolutiva" class="img-responsive">
+
   <h1>Genómica Ecológica y Evolutiva</h1>
-  <p style="color: var(--text-muted);"></p>
+  <p style="color: var(--text-muted);">Curso de posgrado e investigación.</p>
 
   <div class="tabs">
     <input type="radio" name="github-tabs" id="tab-1" checked>
     <label for="tab-1">Presentación</label>
     <div class="content">
-      <h2> TEMARIO </h2>
-      <p></p>
+      <h2>TEMARIO</h2>
       <ul>
-        <li>Unidad 1 Introducción – Conceptos básicos</li>
-        <li>Unidad 2 Teoría y métodos de estudio de Comunidades</li>
-        <li>Unidad 3 Teoría y métodos de estudio de Reglas de ensamblaje</li>
-        <li>Unidad 4 Teoría y métodos de estudio de Nicho Ecológico</li>
-        <li>Unidad 5 Interacción fenotipo-ambiente</li>
-        <li>Unidad 6 Introducción a la teoría y métodos en la Genómica</li>
-        <li>Unidad 7 Genómica de poblaciones y Filogenómica</li>
-        <li>Unidad 8 Teoría y métodos de estudio de expresión de la información genética</li>
+        <li>Unidad 1: Introducción – Conceptos básicos</li>
+        <li>Unidad 2: Teoría y métodos de estudio de Comunidades</li>
+        <li>Unidad 3: Teoría y métodos de estudio de Reglas de ensamblaje</li>
+        <li>Unidad 4: Teoría y métodos de estudio de Nicho Ecológico</li>
+        <li>Unidad 5: Interacción fenotipo-ambiente</li>
+        <li>Unidad 6: Introducción a la teoría y métodos en la Genómica</li>
+        <li>Unidad 7: Genómica de poblaciones y Filogenómica</li>
+        <li>Unidad 8: Teoría y métodos de estudio de expresión de la información genética</li>
       </ul>
     </div>
 
@@ -116,14 +116,14 @@
     <label for="tab-2">OBJETIVOS</label>
     <div class="content">
       <h2>OBJETIVO GENERAL</h2>
-      <p>l objetivo general del curso es proveer las bases teóricas y prácticas para comprender, diseñar y ejecutar estudios integrativosde los procesos ecológicos y genómicos que influyen en la formación y mantenimiento de la biodiversidad.</p>
+      <p>El objetivo general del curso es proveer las bases teóricas y prácticas para comprender, diseñar y ejecutar estudios integrativos de los procesos ecológicos y genómicos que influyen en la formación y mantenimiento de la biodiversidad.</p>
     </div>
 
     <input type="radio" name="github-tabs" id="tab-3">
     <label for="tab-3">PROFESORES</label>
     <div class="content">
-      <h2>NOMBRE</h2>
-      <p>Información.</p>
+      <h2>Cuerpo Académico</h2>
+      <p>Aquí puedes incluir fotos de los profesores usando la misma etiqueta de imagen si lo deseas.</p>
     </div>
   </div>
 </div>
